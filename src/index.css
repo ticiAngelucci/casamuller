@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Sora", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --shadow-card: 0 24px 80px rgba(23, 47, 55, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(186, 221, 218, 0.44), transparent 24%),
+    radial-gradient(circle at 85% 12%, rgba(251, 207, 177, 0.28), transparent 22%),
+    linear-gradient(180deg, #fcfffe 0%, #f4f8f6 52%, #eef3f1 100%);
+  font-family: var(--font-sans);
+  color: #23353b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.loading-line {
+  position: relative;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply border border-white/40 bg-white/65 backdrop-blur-xl;
+}
+
+.section-tag {
+  @apply inline-flex items-center rounded-full border border-olive-500/15 bg-white/85 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-olive-700;
+}
+
+.headline {
+  font-family: var(--font-display);
+}
+
+.warm-shadow {
+  box-shadow: var(--shadow-card);
+}
+
+.soft-ring {
+  @apply ring-1 ring-black/5;
+}
