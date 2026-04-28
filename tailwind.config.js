@@ -5,29 +5,29 @@ export default {
     extend: {
       colors: {
         sand: {
-          50: '#fcfffe',
-          100: '#eef5f2',
-          200: '#dbe8e2',
+          50: '#faf7ef',
+          100: '#f0e9da',
+          200: '#e2d6bf',
         },
         olive: {
-          300: '#9ebfb5',
-          500: '#548578',
-          700: '#2d5a51',
+          300: '#a3b28c',
+          500: '#70855f',
+          700: '#4b5d43',
         },
         clay: {
-          300: '#efc3a3',
-          500: '#cf8d63',
+          300: '#d9c19e',
+          500: '#b58f66',
         },
         stone: {
-          950: '#1c2d33',
+          950: '#2f342d',
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
         sans: ['"Manrope"', 'sans-serif'],
       },
       boxShadow: {
-        card: '0 24px 80px rgba(55, 44, 31, 0.12)',
+        card: '0 22px 70px rgba(61, 62, 44, 0.12)',
       },
     },
   },

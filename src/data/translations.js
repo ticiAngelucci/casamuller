@@ -99,7 +99,7 @@ const translations = {
     languageLabel: 'Idioma',
     hero: {
       eyebrow: 'Alquiler temporario en Mendoza',
-      title: 'Casa Muller',
+      title: 'Casa Müller',
       subtitle: 'Tu lugar para descansar en Mendoza',
       posterTitle: 'Cálido alojamiento en Mendoza',
       posterSubtitle: 'Cercano a bodegas, termas y con increíbles vistas de montañas y viñedos.',
@@ -129,10 +129,10 @@ const translations = {
         'Amplio jardín',
         'Planta superior con balcón',
       ],
-      cardTag: 'Casa Muller',
+      cardTag: 'Casa Müller',
       cardTitle: 'Alojamiento turístico',
       cardText: 'Descanso, naturaleza y comodidad para una escapada en Mendoza.',
-      logoTitle: 'Casa Muller',
+      logoTitle: 'Casa Müller',
       logoSubtitle: 'Alojamiento turístico',
       contactPreview: '@casamullermza',
     },
@@ -140,12 +140,12 @@ const translations = {
       tag: 'Sobre la casa',
       title: 'Un espacio pensado para disfrutar cada momento de tu escapada.',
       description:
-        'Casa Muller es una casa amplia de 250 m² en Las Compuertas, ideal para descansar cerca de bodegas, termas y la montaña. Su distribución combina cocina integrada, living con hogar a leña, suite, jardín y espacios pensados para disfrutar en familia o con amigos.',
+        'Casa Müller es una casa amplia de 250 m² en Las Compuertas, ideal para descansar cerca de bodegas, termas y la montaña. Su distribución combina cocina integrada, living con hogar a leña, suite, jardín y espacios pensados para disfrutar en familia o con amigos.',
       features: sharedFeatures.es,
     },
     services: {
       tag: 'Servicios',
-      title: 'Servicios reales para una estadía amplia, cómoda y bien resuelta.',
+      title: 'Servicios',
       description:
         'Cada detalle está pensado para que la experiencia sea práctica y disfrutable desde la llegada hasta la salida.',
       items: services.es,
@@ -156,6 +156,8 @@ const translations = {
       description:
         'El grid ya está preparado para renderizar imágenes desde un array. Reemplazá estos placeholders por fotos reales de la casa, el patio y los alrededores.',
       close: 'Cerrar imagen',
+      previous: 'Imagen anterior',
+      next: 'Imagen siguiente',
     },
     experience: {
       tag: 'Mendoza',
@@ -165,7 +167,7 @@ const translations = {
       next: 'Imagen siguiente',
       goToSlide: 'Ir a la imagen',
       description:
-        'La ubicación de Casa Muller permite combinar días de relax con planes de turismo, gastronomía y naturaleza. Es una base ideal para descubrir bodegas, recorrer paisajes abiertos y disfrutar escapadas con privacidad y confort.',
+        'La ubicación de Casa Müller permite combinar días de relax con planes de turismo, gastronomía y naturaleza. Es una base ideal para descubrir bodegas, recorrer paisajes abiertos y disfrutar escapadas con privacidad y confort.',
       highlights: [
         'Ideal para descansar con privacidad y ritmo tranquilo.',
         'Cercanía a bodegas y experiencias gastronómicas.',
@@ -197,14 +199,14 @@ const translations = {
       tag: 'Ubicación',
       title: 'Una ubicación estratégica para moverte y desconectar.',
       description:
-        'Casa Muller está ubicada en una zona tranquila de Las Compuertas, ideal para descansar y al mismo tiempo tener buen acceso a bodegas, montaña y paseos por Luján de Cuyo.',
+        'Casa Müller está ubicada en una zona tranquila de Las Compuertas, ideal para descansar y al mismo tiempo tener buen acceso a bodegas, montaña y paseos por Luján de Cuyo.',
       addressLabel: 'Dirección',
       address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
       note: 'Entorno residencial y sereno, con una ubicación conveniente para combinar descanso, vinos y naturaleza.',
       button: 'Cómo llegar',
       directionsUrl:
         'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
-      mapTitle: 'Mapa de Casa Muller en Mendoza',
+      mapTitle: 'Mapa de Casa Müller en Mendoza',
       mapEmbedUrl:
         'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
@@ -218,7 +220,7 @@ const translations = {
       placeholders: 'Placeholder WhatsApp: reemplazá el número 5490000000000 por el contacto real. También podés sumar correo, horarios de atención o políticas de reserva.',
       whatsappNumber: '5490000000000',
       whatsappTemplate: {
-        intro: 'Hola Casa Muller, quiero consultar disponibilidad.',
+        intro: 'Hola Casa Müller, quiero consultar disponibilidad.',
       },
       form: {
         name: 'Nombre',
@@ -275,10 +277,10 @@ const translations = {
         'Large garden',
         'Upper floor with balcony',
       ],
-      cardTag: 'Casa Muller',
+      cardTag: 'Casa Müller',
       cardTitle: 'Tourist accommodation',
       cardText: 'Rest, nature, and comfort for a getaway in Mendoza.',
-      logoTitle: 'Casa Muller',
+      logoTitle: 'Casa Müller',
       logoSubtitle: 'Tourist accommodation',
       contactPreview: '@casamullermza',
     },
@@ -286,12 +288,12 @@ const translations = {
       tag: 'About the house',
       title: 'A home designed to make every part of your getaway feel easy and inviting.',
       description:
-        'Casa Muller blends comfort, warmth, and a peaceful atmosphere for travelers who want to relax in Mendoza. Its layout encourages shared moments, quiet mornings, and a stay that feels both practical and special.',
+        'Casa Müller blends comfort, warmth, and a peaceful atmosphere for travelers who want to relax in Mendoza. Its layout encourages shared moments, quiet mornings, and a stay that feels both practical and special.',
       features: sharedFeatures.en,
     },
     services: {
       tag: 'Services',
-      title: 'Everything you need for a smooth, comfortable, and enjoyable stay.',
+      title: 'Services',
       description:
         'Every detail is prepared so the experience feels effortless from arrival to departure.',
       items: services.en,
@@ -302,6 +304,8 @@ const translations = {
       description:
         'The grid is already prepared to load images from an array. Replace these placeholders with real photos of the house, garden, and surroundings.',
       close: 'Close image',
+      previous: 'Previous image',
+      next: 'Next image',
     },
     experience: {
       tag: 'Mendoza',
@@ -311,7 +315,7 @@ const translations = {
       next: 'Next image',
       goToSlide: 'Go to image',
       description:
-        'Casa Muller offers an ideal base for combining rest with tourism, food, and nature. Spend your days exploring wineries and open landscapes, then return to a private, comfortable place to unwind.',
+        'Casa Müller offers an ideal base for combining rest with tourism, food, and nature. Spend your days exploring wineries and open landscapes, then return to a private, comfortable place to unwind.',
       highlights: [
         'Perfect for restful days with privacy and calm.',
         'Close to wineries and food experiences.',
@@ -343,14 +347,14 @@ const translations = {
       tag: 'Location',
       title: 'A strategic location to move around easily and disconnect well.',
       description:
-        'Casa Muller is located in a quiet area of Las Compuertas, ideal for relaxing while staying close to wineries, mountain routes, and experiences in Luján de Cuyo.',
+        'Casa Müller is located in a quiet area of Las Compuertas, ideal for relaxing while staying close to wineries, mountain routes, and experiences in Luján de Cuyo.',
       addressLabel: 'Address',
       address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
       note: 'A peaceful residential setting with convenient access to wine country, nature, and scenic drives.',
       button: 'Get directions',
       directionsUrl:
         'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
-      mapTitle: 'Casa Muller map in Mendoza',
+      mapTitle: 'Casa Müller map in Mendoza',
       mapEmbedUrl:
         'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
@@ -364,7 +368,7 @@ const translations = {
       placeholders: 'WhatsApp placeholder: replace 5490000000000 with the real number. You can also add email, opening hours, or booking policies.',
       whatsappNumber: '5490000000000',
       whatsappTemplate: {
-        intro: 'Hello Casa Muller, I would like to check availability.',
+        intro: 'Hello Casa Müller, I would like to check availability.',
       },
       form: {
         name: 'Name',
@@ -391,7 +395,7 @@ const translations = {
     languageLabel: 'Idioma',
     hero: {
       eyebrow: 'Aluguel temporário em Mendoza',
-      title: 'Casa Muller',
+      title: 'Casa Müller',
       subtitle: 'Seu lugar para descansar em Mendoza',
       posterTitle: 'Acomodação acolhedora em Mendoza',
       posterSubtitle: 'Perto de vinícolas, termas e com vistas incríveis para montanhas e vinhedos.',
@@ -421,10 +425,10 @@ const translations = {
         'Amplo jardim',
         'Andar superior com varanda',
       ],
-      cardTag: 'Casa Muller',
+      cardTag: 'Casa Müller',
       cardTitle: 'Hospedagem turística',
       cardText: 'Descanso, natureza e conforto para uma escapada em Mendoza.',
-      logoTitle: 'Casa Muller',
+      logoTitle: 'Casa Müller',
       logoSubtitle: 'Hospedagem turística',
       contactPreview: '@casamullermza',
     },
@@ -432,12 +436,12 @@ const translations = {
       tag: 'Sobre a casa',
       title: 'Um espaço pensado para aproveitar cada momento da sua escapada.',
       description:
-        'Casa Muller é uma casa ampla de 250 m² em Las Compuertas, ideal para descansar perto de vinícolas, termas e montanha. A distribuição combina cozinha integrada, sala com lareira, suíte, jardim e espaços pensados para curtir em família ou com amigos.',
+        'Casa Müller é uma casa ampla de 250 m² em Las Compuertas, ideal para descansar perto de vinícolas, termas e montanha. A distribuição combina cozinha integrada, sala com lareira, suíte, jardim e espaços pensados para curtir em família ou com amigos.',
       features: sharedFeatures.pt,
     },
     services: {
       tag: 'Serviços',
-      title: 'Tudo o que você precisa para uma estadia prática, confortável e agradável.',
+      title: 'Serviços',
       description:
         'Cada detalhe foi pensado para que a experiência seja leve e prazerosa do check-in ao check-out.',
       items: services.pt,
@@ -448,6 +452,8 @@ const translations = {
       description:
         'O grid já está preparado para carregar imagens de um array. Troque estes placeholders por fotos reais da casa, do pátio e dos arredores.',
       close: 'Fechar imagem',
+      previous: 'Imagem anterior',
+      next: 'Próxima imagem',
     },
     experience: {
       tag: 'Mendoza',
@@ -457,7 +463,7 @@ const translations = {
       next: 'Próxima imagem',
       goToSlide: 'Ir para a imagem',
       description:
-        'Casa Muller é uma base ideal para combinar descanso com turismo, gastronomia e natureza. Explore vinícolas e paisagens abertas durante o dia e volte para um espaço privativo e acolhedor ao entardecer.',
+        'Casa Müller é uma base ideal para combinar descanso com turismo, gastronomia e natureza. Explore vinícolas e paisagens abertas durante o dia e volte para um espaço privativo e acolhedor ao entardecer.',
       highlights: [
         'Ideal para descansar com privacidade e tranquilidade.',
         'Próxima de vinícolas e experiências gastronômicas.',
@@ -489,14 +495,14 @@ const translations = {
       tag: 'Localização',
       title: 'Uma localização estratégica para circular bem e desconectar melhor.',
       description:
-        'Casa Muller está localizada em uma área tranquila de Las Compuertas, ideal para descansar e ao mesmo tempo ficar perto de vinícolas, montanhas e passeios em Luján de Cuyo.',
+        'Casa Müller está localizada em uma área tranquila de Las Compuertas, ideal para descansar e ao mesmo tempo ficar perto de vinícolas, montanhas e passeios em Luján de Cuyo.',
       addressLabel: 'Endereço',
       address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
       note: 'Ambiente residencial e tranquilo, com acesso conveniente a vinícolas, natureza e rotas cênicas.',
       button: 'Como chegar',
       directionsUrl:
         'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
-      mapTitle: 'Mapa da Casa Muller em Mendoza',
+      mapTitle: 'Mapa da Casa Müller em Mendoza',
       mapEmbedUrl:
         'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
@@ -510,7 +516,7 @@ const translations = {
       placeholders: 'Placeholder WhatsApp: substitua 5490000000000 pelo número real. Você também pode incluir e-mail, horários ou políticas de reserva.',
       whatsappNumber: '5490000000000',
       whatsappTemplate: {
-        intro: 'Olá Casa Muller, gostaria de consultar disponibilidade.',
+        intro: 'Olá Casa Müller, gostaria de consultar disponibilidade.',
       },
       form: {
         name: 'Nome',

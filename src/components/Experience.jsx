@@ -25,9 +25,9 @@ function Experience({ t, images }) {
   return (
     <section className="py-16 sm:py-20">
       <div className="section-shell">
-        <div className="grid gap-6 rounded-[2rem] border border-white/60 bg-white/82 p-5 shadow-[0_22px_60px_rgba(23,47,55,0.10)] soft-ring lg:grid-cols-[1.05fr_0.95fr] lg:p-7">
+        <div className="grid gap-6 rounded-[2.1rem] border border-white/80 bg-white/84 p-5 shadow-[0_22px_60px_rgba(23,47,55,0.07)] soft-ring lg:grid-cols-[1.05fr_0.95fr] lg:p-7">
           <motion.div
-            className="relative overflow-hidden rounded-[1.6rem] min-h-[360px] bg-stone-950"
+            className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] bg-stone-950"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
@@ -47,12 +47,12 @@ function Experience({ t, images }) {
                   alt={images[currentIndex].alt}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/18 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/74 via-stone-950/20 to-transparent" />
               </motion.div>
             </AnimatePresence>
 
             <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-              <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.24em] text-white/82 backdrop-blur-sm">
+              <span className="rounded-full border border-white/15 bg-white/12 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-sm">
                 {t.experience.carouselLabel}
               </span>
               <div className="flex gap-2">
@@ -60,7 +60,7 @@ function Experience({ t, images }) {
                   type="button"
                   onClick={goToPrevious}
                   aria-label={t.experience.previous}
-                  className="rounded-full border border-white/15 bg-white/10 p-3 text-white backdrop-blur-sm transition hover:bg-white/18"
+                  className="rounded-full border border-white/15 bg-white/12 p-3 text-white backdrop-blur-sm transition hover:bg-white/20"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </button>
@@ -68,7 +68,7 @@ function Experience({ t, images }) {
                   type="button"
                   onClick={goToNext}
                   aria-label={t.experience.next}
-                  className="rounded-full border border-white/15 bg-white/10 p-3 text-white backdrop-blur-sm transition hover:bg-white/18"
+                  className="rounded-full border border-white/15 bg-white/12 p-3 text-white backdrop-blur-sm transition hover:bg-white/20"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </button>
@@ -110,14 +110,14 @@ function Experience({ t, images }) {
             <h2 className="headline mt-6 max-w-xl text-4xl font-bold text-stone-950 sm:text-5xl">
               {t.experience.title}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-stone-600 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-stone-600 sm:text-lg">
               {t.experience.description}
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {t.experience.highlights.map((item, index) => (
                 <motion.div
                   key={item}
-                  className="rounded-[1.3rem] bg-sand-50 p-4 ring-1 ring-stone-900/6"
+                  className="rounded-[1.4rem] bg-[#faf9f4] p-4 ring-1 ring-stone-900/6 shadow-[0_10px_24px_rgba(23,47,55,0.04)]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}

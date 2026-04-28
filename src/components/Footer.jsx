@@ -3,18 +3,18 @@ function Footer({ t }) {
     <footer className="border-t border-stone-900/6 py-12">
       <div className="section-shell flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <div className="headline text-3xl font-bold text-stone-950">Casa Muller</div>
+          <div className="headline text-3xl font-bold text-stone-950">Casa Müller</div>
           <p className="mt-3 max-w-md text-sm leading-7 text-stone-600">{t.footer.description}</p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.24em] text-clay-500">
+            <div className="text-xs font-bold uppercase tracking-[0.24em] text-stone-500">
               {t.footer.quickLinksLabel}
             </div>
             <div className="mt-4 flex flex-col gap-3 text-sm text-stone-700">
               {t.navLinks.map((item) => (
-                <a key={item.href} href={item.href} className="transition hover:text-olive-700">
+                <a key={item.href} href={item.href} className="transition hover:text-stone-950">
                   {item.label}
                 </a>
               ))}
@@ -22,7 +22,7 @@ function Footer({ t }) {
           </div>
 
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.24em] text-clay-500">
+            <div className="text-xs font-bold uppercase tracking-[0.24em] text-stone-500">
               {t.footer.socialLabel}
             </div>
             <div className="mt-4 flex flex-col gap-3 text-sm text-stone-700">
@@ -36,7 +36,7 @@ function Footer({ t }) {
           </div>
 
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.24em] text-clay-500">
+            <div className="text-xs font-bold uppercase tracking-[0.24em] text-stone-500">
               {t.footer.legalLabel}
             </div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-stone-600">{t.footer.legalText}</p>

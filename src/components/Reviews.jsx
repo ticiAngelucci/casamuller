@@ -35,7 +35,7 @@ function Reviews({ t, reviews }) {
   return (
     <section className="py-16 sm:py-20">
       <div className="section-shell">
-        <div className="grid gap-6 rounded-[2rem] border border-white/70 bg-white/84 p-5 shadow-[0_24px_70px_rgba(23,47,55,0.10)] backdrop-blur-xl lg:grid-cols-[0.72fr_1.28fr] lg:p-7">
+        <div className="grid gap-6 rounded-[2.1rem] border border-white/80 bg-white/84 p-5 shadow-[0_24px_70px_rgba(23,47,55,0.07)] backdrop-blur-xl lg:grid-cols-[0.72fr_1.28fr] lg:p-7">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ function Reviews({ t, reviews }) {
               {t.reviews.description}
             </p>
 
-            <div className="mt-8 rounded-[1.5rem] bg-sand-50 p-5 ring-1 ring-stone-900/6">
+            <div className="mt-8 rounded-[1.6rem] bg-[#faf9f4] p-5 ring-1 ring-stone-900/6 shadow-[0_12px_28px_rgba(23,47,55,0.04)]">
               <div className="flex items-center gap-3">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, index) => (
@@ -64,7 +64,7 @@ function Reviews({ t, reviews }) {
                 href={t.reviews.summary.link}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex rounded-full bg-stone-950 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white"
+                className="mt-4 inline-flex rounded-full bg-stone-950 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_10px_26px_rgba(28,45,51,0.14)]"
               >
                 {t.reviews.summary.button}
               </a>
@@ -72,7 +72,7 @@ function Reviews({ t, reviews }) {
           </motion.div>
 
           <motion.div
-            className="rounded-[1.8rem] bg-[linear-gradient(135deg,rgba(84,133,120,0.08),rgba(255,255,255,0.88),rgba(207,141,99,0.10))] p-4 ring-1 ring-stone-900/6 sm:p-5"
+            className="rounded-[1.8rem] bg-[linear-gradient(135deg,rgba(115,146,134,0.05),rgba(255,255,255,0.96),rgba(216,178,150,0.05))] p-4 ring-1 ring-stone-900/6 sm:p-5"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -81,7 +81,7 @@ function Reviews({ t, reviews }) {
             <div className="mb-4 flex items-center justify-between gap-4">
               <div
                 className={`rounded-full px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.18em] ${
-                  isBooking ? 'bg-olive-700 text-white' : 'bg-clay-500 text-white'
+                  isBooking ? 'bg-stone-950 text-white' : 'bg-olive-700 text-white'
                 }`}
               >
                 {isBooking ? t.reviews.bookingLabel : t.reviews.googleLabel}
@@ -91,7 +91,7 @@ function Reviews({ t, reviews }) {
                   type="button"
                   onClick={goToPrevious}
                   aria-label={t.reviews.previous}
-                  className="rounded-full bg-white p-3 text-stone-900 ring-1 ring-stone-900/6 transition hover:bg-sand-50"
+                  className="rounded-full bg-white p-3 text-stone-900 ring-1 ring-stone-900/6 transition hover:bg-[#fbfbf8]"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </button>
@@ -99,7 +99,7 @@ function Reviews({ t, reviews }) {
                   type="button"
                   onClick={goToNext}
                   aria-label={t.reviews.next}
-                  className="rounded-full bg-white p-3 text-stone-900 ring-1 ring-stone-900/6 transition hover:bg-sand-50"
+                  className="rounded-full bg-white p-3 text-stone-900 ring-1 ring-stone-900/6 transition hover:bg-[#fbfbf8]"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </button>
@@ -109,18 +109,18 @@ function Reviews({ t, reviews }) {
             <AnimatePresence mode="wait">
               <motion.article
                 key={`${currentReview.source}-${currentIndex}`}
-                className="rounded-[1.6rem] bg-white p-6 shadow-[0_18px_45px_rgba(23,47,55,0.08)] ring-1 ring-stone-900/6"
+                className="rounded-[1.7rem] bg-white p-6 shadow-[0_18px_45px_rgba(23,47,55,0.06)] ring-1 ring-stone-900/6"
                 initial={{ opacity: 0, y: 18, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -18, scale: 0.98 }}
                 transition={{ duration: 0.35, ease: 'easeOut' }}
               >
-                <Quote className={`h-8 w-8 ${isBooking ? 'text-olive-700' : 'text-clay-500'}`} />
+                <Quote className={`h-8 w-8 ${isBooking ? 'text-stone-950' : 'text-olive-700'}`} />
                 <p className="mt-5 max-w-2xl text-base leading-8 text-stone-700 sm:text-lg">
                   {currentReview.text}
                 </p>
 
-                <div className="mt-7 flex flex-col gap-4 border-t border-stone-900/8 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-7 flex flex-col gap-4 border-t border-stone-900/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <div className="font-semibold text-stone-950">{currentReview.name}</div>
                     <div className="mt-1 text-xs uppercase tracking-[0.16em] text-stone-500">
@@ -129,14 +129,14 @@ function Reviews({ t, reviews }) {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="rounded-full bg-sand-50 px-4 py-2 text-sm font-bold text-stone-900 ring-1 ring-stone-900/6">
+                    <div className="rounded-full bg-[#faf9f4] px-4 py-2 text-sm font-bold text-stone-900 ring-1 ring-stone-900/6">
                       {currentReview.rating}
                     </div>
                     <a
                       href={currentReview.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex rounded-full bg-stone-950 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white"
+                      className="inline-flex rounded-full bg-stone-950 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_10px_26px_rgba(28,45,51,0.14)]"
                     >
                       {isBooking ? t.reviews.openBooking : t.reviews.openGoogle}
                     </a>
@@ -154,7 +154,7 @@ function Reviews({ t, reviews }) {
                   aria-label={`${t.reviews.goTo} ${index + 1}`}
                   className={`h-2.5 rounded-full transition-all ${
                     index === currentIndex
-                      ? `w-10 ${item.source === 'booking' ? 'bg-olive-700' : 'bg-clay-500'}`
+                      ? `w-10 ${item.source === 'booking' ? 'bg-stone-950' : 'bg-olive-700'}`
                       : 'w-2.5 bg-stone-300'
                   }`}
                 />

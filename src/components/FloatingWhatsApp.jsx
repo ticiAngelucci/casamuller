@@ -11,7 +11,7 @@ function FloatingWhatsApp({ t }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-5 right-5 z-[70] inline-flex items-center gap-3 rounded-full bg-olive-700 px-5 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(45,90,81,0.32)] ring-1 ring-white/20 sm:bottom-6 sm:right-6"
+      className="fixed bottom-5 right-5 z-[70] inline-flex items-center gap-3 rounded-full bg-stone-950 px-5 py-4 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(28,45,51,0.22)] ring-1 ring-white/20 sm:bottom-6 sm:right-6"
       initial={{ opacity: 0, scale: 0.88, y: 18 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ delay: 1.1, duration: 0.45, ease: 'easeOut' }}

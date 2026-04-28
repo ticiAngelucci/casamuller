@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-display: "Sora", sans-serif;
-  --font-sans: "Plus Jakarta Sans", sans-serif;
-  --shadow-card: 0 24px 80px rgba(23, 47, 55, 0.12);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Manrope", sans-serif;
+  --shadow-card: 0 22px 70px rgba(18, 32, 38, 0.08);
 }
 
 html {
@@ -17,11 +17,13 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(186, 221, 218, 0.44), transparent 24%),
-    radial-gradient(circle at 85% 12%, rgba(251, 207, 177, 0.28), transparent 22%),
-    linear-gradient(180deg, #fcfffe 0%, #f4f8f6 52%, #eef3f1 100%);
+    radial-gradient(circle at top left, rgba(163, 178, 140, 0.14), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(217, 193, 158, 0.16), transparent 18%),
+    linear-gradient(180deg, #f7f2e7 0%, #efe7d8 48%, #ebe6d8 100%);
   font-family: var(--font-sans);
-  color: #23353b;
+  color: #384036;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 * {
@@ -41,15 +43,16 @@ body {
 }
 
 .glass-panel {
-  @apply border border-white/40 bg-white/65 backdrop-blur-xl;
+  @apply border border-white/60 bg-[#f7f0e3]/90 backdrop-blur-xl;
 }
 
 .section-tag {
-  @apply inline-flex items-center rounded-full border border-olive-500/15 bg-white/85 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-olive-700;
+  @apply inline-flex items-center rounded-full border border-olive-700/15 bg-[#f7f0e3]/90 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-olive-700 shadow-[0_6px_18px_rgba(61,62,44,0.06)];
 }
 
 .headline {
   font-family: var(--font-display);
+  letter-spacing: -0.045em;
 }
 
 .warm-shadow {

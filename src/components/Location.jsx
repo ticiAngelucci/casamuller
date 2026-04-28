@@ -15,12 +15,12 @@ function Location({ t }) {
           <h2 className="headline mt-6 text-4xl font-bold text-stone-950 sm:text-5xl">
             {t.location.title}
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">
             {t.location.description}
           </p>
-          <div className="mt-6 rounded-[1.6rem] bg-white/85 p-5 shadow-[0_18px_45px_rgba(23,47,55,0.08)] soft-ring">
+          <div className="mt-6 rounded-[1.7rem] bg-white/88 p-5 shadow-[0_18px_45px_rgba(23,47,55,0.05)] soft-ring">
             <div className="flex items-start gap-4">
-              <div className="rounded-2xl bg-olive-700 p-3 text-white">
+              <div className="rounded-2xl bg-stone-950 p-3 text-white shadow-[0_10px_24px_rgba(28,45,51,0.14)]">
                 <MapPinned className="h-5 w-5" />
               </div>
               <div>
@@ -35,7 +35,7 @@ function Location({ t }) {
               href={t.location.directionsUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-stone-950 px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-stone-950 px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_26px_rgba(28,45,51,0.14)]"
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -45,7 +45,7 @@ function Location({ t }) {
         </motion.div>
 
         <motion.div
-          className="overflow-hidden rounded-[2rem] border border-white/65 bg-white p-3 shadow-[0_18px_45px_rgba(23,47,55,0.08)] soft-ring"
+          className="overflow-hidden rounded-[2rem] border border-white/75 bg-white p-3 shadow-[0_18px_45px_rgba(23,47,55,0.05)] soft-ring"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
