@@ -120,7 +120,7 @@ function Hero({ t, images }) {
           </motion.div>
 
           <motion.div
-            className="relative h-full"
+            className="group relative h-full"
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.85, ease: 'easeOut', delay: 0.08 }}
@@ -132,7 +132,7 @@ function Hero({ t, images }) {
                 <img
                   src={images.main.src}
                   alt={images.main.alt}
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.10)_0%,rgba(0,0,0,0.02)_50%,rgba(0,0,0,0.12)_100%)]" />
               </div>

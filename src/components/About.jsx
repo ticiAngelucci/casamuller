@@ -2,23 +2,14 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0 },
-}
-
 function About({ t, images }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const about = t?.about ?? {}
+  const features = Array.isArray(about.features) ? about.features : []
+  const title = about.title ?? ''
+  const description = about.description ?? ''
+  const previousImageLabel = about.previousImage ?? 'Previous image'
+  const nextImageLabel = about.nextImage ?? 'Next image'
   const mixedImages = [
     images[0],
     images[12],
@@ -57,10 +48,10 @@ function About({ t, images }) {
             transition={{ duration: 0.7 }}
           >
             <h2 className="headline mt-6 max-w-xl text-4xl font-bold text-stone-950 sm:text-5xl">
-              {t.about.title}
+              {title}
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">
-              {t.about.description}
+              {description}
             </p>
 
             <div className="relative">
@@ -68,7 +59,7 @@ function About({ t, images }) {
                 <button
                   type="button"
                   onClick={goToPrevious}
-                  aria-label="Imagen anterior"
+                  aria-label={previousImageLabel}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f9f4ea] text-stone-900 shadow-[0_8px_18px_rgba(61,62,44,0.10)] ring-1 ring-olive-700/10 transition hover:bg-white"
                 >
                   <ChevronLeft className="h-5 w-5" />
@@ -76,7 +67,7 @@ function About({ t, images }) {
                 <button
                   type="button"
                   onClick={goToNext}
-                  aria-label="Imagen siguiente"
+                  aria-label={nextImageLabel}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f9f4ea] text-stone-900 shadow-[0_8px_18px_rgba(61,62,44,0.10)] ring-1 ring-olive-700/10 transition hover:bg-white"
                 >
                   <ChevronRight className="h-5 w-5" />
@@ -95,12 +86,12 @@ function About({ t, images }) {
                     {previewImages.map((image) => (
                       <div
                         key={image.id}
-                        className="overflow-hidden rounded-[1.7rem] bg-[#faf9f4] p-3 ring-1 ring-stone-900/6 shadow-[0_12px_28px_rgba(23,47,55,0.05)]"
+                        className="group overflow-hidden rounded-[1.7rem] bg-[#faf9f4] p-3 ring-1 ring-stone-900/6 shadow-[0_12px_28px_rgba(23,47,55,0.05)]"
                       >
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="h-[220px] w-full rounded-[1.2rem] object-cover"
+                          className="h-[220px] w-full rounded-[1.2rem] object-cover transition duration-700 group-hover:scale-105"
                         />
                       </div>
                     ))}
@@ -110,18 +101,14 @@ function About({ t, images }) {
             </div>
           </motion.div>
 
-          <motion.div
-            className="grid gap-4 sm:grid-cols-2"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {t.about.features.slice(0, 6).map((feature) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {features.slice(0, 6).map((feature) => (
               <motion.article
                 key={feature.title}
-                variants={cardVariants}
-                transition={{ duration: 0.55 }}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.08 }}
+                transition={{ duration: 0.5 }}
                 className="rounded-[1.6rem] border border-white/70 bg-[#fcfcf8] p-5 shadow-[0_12px_30px_rgba(23,47,55,0.04)] soft-ring"
               >
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
@@ -131,7 +118,7 @@ function About({ t, images }) {
                 <p className="mt-2 text-sm leading-6 text-stone-600">{feature.text}</p>
               </motion.article>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

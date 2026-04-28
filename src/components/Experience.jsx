@@ -25,11 +25,11 @@ function Experience({ t, images }) {
   return (
     <section className="py-16 sm:py-20">
       <div className="section-shell">
-        <div className="grid gap-6 rounded-[2.1rem] border border-white/80 bg-white/84 p-5 shadow-[0_22px_60px_rgba(23,47,55,0.07)] soft-ring lg:grid-cols-[1.05fr_0.95fr] lg:p-7">
+        <div className="grid gap-6 rounded-[2.1rem] border border-white/80 bg-white/84 p-4 shadow-[0_22px_60px_rgba(23,47,55,0.07)] soft-ring lg:grid-cols-[1.02fr_0.98fr] sm:p-5 lg:p-7">
           <motion.div
-            className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] bg-stone-950"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="relative min-h-[360px] overflow-hidden rounded-[1.8rem] bg-stone-950 sm:min-h-[440px]"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.8 }}
           >
@@ -47,14 +47,11 @@ function Experience({ t, images }) {
                   alt={images[currentIndex].alt}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/74 via-stone-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/22 via-transparent to-transparent" />
               </motion.div>
             </AnimatePresence>
 
-            <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-              <span className="rounded-full border border-white/15 bg-white/12 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/82 backdrop-blur-sm">
-                {t.experience.carouselLabel}
-              </span>
+            <div className="absolute inset-x-0 top-0 flex items-center justify-end p-4">
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -75,15 +72,8 @@ function Experience({ t, images }) {
               </div>
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <div className="text-xs font-bold uppercase tracking-[0.24em] text-white/66">
-                {images[currentIndex].tag}
-              </div>
-              <div className="mt-2 text-2xl font-semibold">{images[currentIndex].title}</div>
-              <p className="mt-3 max-w-md text-sm leading-7 text-white/80">
-                {images[currentIndex].description}
-              </p>
-              <div className="mt-5 flex gap-2">
+            <div className="absolute inset-x-0 bottom-0 flex justify-center p-5">
+              <div className="flex gap-2 rounded-full bg-stone-950/18 px-3 py-2 backdrop-blur-sm">
                 {images.map((image, index) => (
                   <button
                     key={image.id}

@@ -27,10 +27,10 @@ function Footer({ t }) {
             </div>
             <div className="mt-4 flex flex-col gap-3 text-sm text-stone-700">
               <a href="https://www.instagram.com/casamullermza" target="_blank" rel="noreferrer">
-                Instagram
+                {t.footer.instagramLabel}
               </a>
               <a href={`https://wa.me/${t.contact.whatsappNumber}`} target="_blank" rel="noreferrer">
-                WhatsApp
+                {t.footer.whatsappLabel}
               </a>
             </div>
           </div>

@@ -1,63 +1,52 @@
 import { motion } from 'framer-motion'
-import { MapPinned } from 'lucide-react'
 
 function Location({ t }) {
   return (
     <section id="ubicacion" className="py-16 sm:py-20">
-      <div className="section-shell grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+      <div className="section-shell">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.7 }}
-        >
-          <span className="section-tag">{t.location.tag}</span>
-          <h2 className="headline mt-6 text-4xl font-bold text-stone-950 sm:text-5xl">
-            {t.location.title}
-          </h2>
-          <p className="mt-5 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">
-            {t.location.description}
-          </p>
-          <div className="mt-6 rounded-[1.7rem] bg-white/88 p-5 shadow-[0_18px_45px_rgba(23,47,55,0.05)] soft-ring">
-            <div className="flex items-start gap-4">
-              <div className="rounded-2xl bg-stone-950 p-3 text-white shadow-[0_10px_24px_rgba(28,45,51,0.14)]">
-                <MapPinned className="h-5 w-5" />
-              </div>
-              <div>
-                <div className="text-xs font-bold uppercase tracking-[0.24em] text-clay-500">
-                  {t.location.addressLabel}
-                </div>
-                <p className="mt-2 text-base font-semibold text-stone-900">{t.location.address}</p>
-                <p className="mt-2 text-sm leading-7 text-stone-600">{t.location.note}</p>
-              </div>
-            </div>
-            <motion.a
-              href={t.location.directionsUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-stone-950 px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_26px_rgba(28,45,51,0.14)]"
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {t.location.button}
-            </motion.a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="overflow-hidden rounded-[2rem] border border-white/75 bg-white p-3 shadow-[0_18px_45px_rgba(23,47,55,0.05)] soft-ring"
+          className="overflow-hidden rounded-[2.3rem] border border-[#708261]/20 bg-[#556a4e] text-white shadow-[0_28px_72px_rgba(55,69,47,0.18)]"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.75, delay: 0.1 }}
+          transition={{ duration: 0.75 }}
         >
-          <iframe
-            title={t.location.mapTitle}
-            src={t.location.mapEmbedUrl}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="h-[320px] w-full rounded-[1.4rem] md:h-[380px]"
-          />
+          <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.92fr_auto] lg:items-start">
+            <div>
+              <span className="inline-flex rounded-full border border-white/18 bg-white/12 px-4 py-2 text-[0.7rem] font-bold uppercase tracking-[0.28em] text-white">
+                {t.location.tag}
+              </span>
+              <h2 className="headline mt-5 max-w-md text-3xl font-bold leading-tight text-white sm:text-4xl">
+                {t.location.title}
+              </h2>
+              <p className="mt-4 max-w-lg text-base leading-7 text-white/86">{t.location.description}</p>
+            </div>
+
+            <div className="lg:pt-[3.25rem]">
+              <motion.a
+                href={t.location.directionsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-[54px] items-center justify-center rounded-full bg-[#f3ead7] px-6 text-sm font-bold uppercase tracking-[0.14em] text-[#405136] shadow-[0_12px_26px_rgba(27,37,24,0.12)] transition hover:bg-[#e9dcc2] lg:min-w-[210px]"
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {t.location.button}
+              </motion.a>
+            </div>
+          </div>
+
+          <div className="px-4 pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8">
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#607555] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+              <iframe
+                title={t.location.mapTitle}
+                src={t.location.mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[320px] w-full rounded-[1.5rem] md:h-[420px]"
+              />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
