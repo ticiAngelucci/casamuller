@@ -27,9 +27,9 @@ const navLinks = {
 
 const sharedFeatures = {
   es: [
-    { value: '6 huéspedes', title: 'Capacidad', text: 'Espacios preparados para recibir familias o parejas que buscan una estadía cómoda y privada.' },
-    { value: '3 ambientes', title: 'Habitaciones', text: 'Dormitorios luminosos con una atmósfera serena para descansar después de recorrer Mendoza.' },
-    { value: '2 baños', title: 'Baños', text: 'Baños funcionales con detalles cuidados y el confort necesario para una experiencia relajada.' },
+    { value: 'Hasta 7 huéspedes', title: 'Capacidad', text: 'Casa completa pensada para grupos familiares o escapadas con espacios amplios y estadía privada.' },
+    { value: '3 dormitorios', title: 'Habitaciones', text: 'Incluye una suite, camas cómodas y ambientes luminosos preparados para descansar de verdad.' },
+    { value: '3 baños', title: 'Baños', text: 'Tres baños funcionales para que una familia o grupo viaje con más comodidad y mejor ritmo.' },
     { value: 'Full equip', title: 'Cocina equipada', text: 'Vajilla, electrodomésticos y todo lo necesario para desayunos tranquilos o cenas caseras.' },
     { value: 'Exterior', title: 'Patio / jardín', text: 'Un rincón verde para leer, compartir una copa de vino o simplemente disfrutar del aire mendocino.' },
     { value: 'Asador', title: 'Parrilla', text: 'Ideal para almuerzos largos y encuentros al atardecer con un clima cálido y familiar.' },
@@ -47,9 +47,9 @@ const sharedFeatures = {
     { value: 'Ease', title: 'Parking', text: 'A dedicated space to arrive with peace of mind and move freely around the city.' },
   ],
   pt: [
-    { value: '6 hóspedes', title: 'Capacidade', text: 'Espaços preparados para receber famílias ou casais em uma estadia confortável e privativa.' },
-    { value: '3 ambientes', title: 'Quartos', text: 'Ambientes iluminados e tranquilos para descansar depois de explorar Mendoza.' },
-    { value: '2 banheiros', title: 'Banheiros', text: 'Banheiros funcionais com detalhes bem cuidados e conforto para uma experiência relaxante.' },
+    { value: 'Até 7 hóspedes', title: 'Capacidade', text: 'Casa completa pensada para famílias ou pequenos grupos com estadia confortável e privativa.' },
+    { value: '3 quartos', title: 'Quartos', text: 'Inclui uma suíte, camas confortáveis e ambientes claros para descansar depois dos passeios.' },
+    { value: '3 banheiros', title: 'Banheiros', text: 'Três banheiros funcionais para uma estadia mais prática e confortável em grupo.' },
     { value: 'Completa', title: 'Cozinha equipada', text: 'Louças, eletrodomésticos e tudo o que você precisa para cafés da manhã tranquilos ou jantares em casa.' },
     { value: 'Ao ar livre', title: 'Pátio / jardim', text: 'Um espaço verde para ler, brindar com vinho ou simplesmente aproveitar o clima de Mendoza.' },
     { value: 'Churrasqueira', title: 'Parrilla', text: 'Perfeita para almoços demorados e encontros ao entardecer em um clima acolhedor.' },
@@ -106,13 +106,13 @@ const translations = {
       tabs: ['Estadía', 'Escapada', 'Descanso'],
       quickInfo: [
         { label: 'Ubicación', value: 'Mendoza, Argentina', icon: 'location' },
-        { label: 'Capacidad', value: 'Hasta 6 huéspedes', icon: 'house' },
+        { label: 'Capacidad', value: 'Hasta 7 huéspedes', icon: 'house' },
         { label: 'Entorno', value: 'Jardín y montaña', icon: 'nature' },
       ],
       stats: [
-        { value: '9K+', label: 'Búsquedas de estadías' },
-        { value: '5K+', label: 'Viajeros interesados' },
-        { value: '58+', label: 'Escapadas memorables' },
+        { value: '9.6', label: 'Puntaje excepcional en Booking' },
+        { value: '250 m²', label: 'Superficie de la casa' },
+        { value: '9.4', label: 'Ubicación destacada' },
       ],
       locationLabel: 'Ubicación',
       locationValue: 'Mendoza, Argentina',
@@ -140,12 +140,12 @@ const translations = {
       tag: 'Sobre la casa',
       title: 'Un espacio pensado para disfrutar cada momento de tu escapada.',
       description:
-        'Casa Muller combina comodidad, calidez y una atmósfera serena para quienes buscan descansar en Mendoza. Su distribución invita a compartir, relajarse y vivir la ciudad con el ritmo justo, ya sea en una escapada familiar o en pareja.',
+        'Casa Muller es una casa amplia de 250 m² en Las Compuertas, ideal para descansar cerca de bodegas, termas y la montaña. Su distribución combina cocina integrada, living con hogar a leña, suite, jardín y espacios pensados para disfrutar en familia o con amigos.',
       features: sharedFeatures.es,
     },
     services: {
       tag: 'Servicios',
-      title: 'Todo lo necesario para una estadía simple, cómoda y bien acompañada.',
+      title: 'Servicios reales para una estadía amplia, cómoda y bien resuelta.',
       description:
         'Cada detalle está pensado para que la experiencia sea práctica y disfrutable desde la llegada hasta la salida.',
       items: services.es,
@@ -174,18 +174,39 @@ const translations = {
       ],
       imageAlt: 'Viñedos y paisaje natural de Mendoza',
     },
+    reviews: {
+      tag: 'Opiniones',
+      title: 'Opiniones desde Booking y accesos directos a reseñas de Google.',
+      description:
+        'La sección combina comentarios visibles de Booking con enlaces directos a reseñas compartidas desde Google. Cuando tengamos el texto exacto de Google, reemplazamos esas tarjetas sin tocar el diseño.',
+      bookingLabel: 'Booking',
+      googleLabel: 'Google Reviews',
+      openBooking: 'Ver en Booking',
+      openGoogle: 'Abrir reseña',
+      previous: 'Reseña anterior',
+      next: 'Siguiente reseña',
+      goTo: 'Ir a la reseña',
+      summary: {
+        rating: '9.6',
+        caption: 'Maqueta visual basada en la ficha pública de Booking y preparada para conectar luego con reseñas reales.',
+        button: 'Ver en Booking',
+        link: 'https://www.booking.com/hotel/ar/casa-muller-mendoza.es-ar.html',
+      },
+    },
     location: {
       tag: 'Ubicación',
       title: 'Una ubicación estratégica para moverte y desconectar.',
       description:
-        'Usá esta sección para sumar la dirección real de Casa Muller, referencias barriales y puntos de interés cercanos.',
+        'Casa Muller está ubicada en una zona tranquila de Las Compuertas, ideal para descansar y al mismo tiempo tener buen acceso a bodegas, montaña y paseos por Luján de Cuyo.',
       addressLabel: 'Dirección',
-      address: 'Placeholder dirección real de Casa Muller, Mendoza, Argentina',
-      note: 'Reemplazá este texto por indicaciones precisas, barrio, cercanía a bodegas o accesos principales.',
+      address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
+      note: 'Entorno residencial y sereno, con una ubicación conveniente para combinar descanso, vinos y naturaleza.',
       button: 'Cómo llegar',
-      directionsUrl: 'https://maps.google.com/?q=Mendoza+Argentina',
+      directionsUrl:
+        'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
       mapTitle: 'Mapa de Casa Muller en Mendoza',
-      mapEmbedUrl: 'https://www.google.com/maps?q=Mendoza%20Argentina&z=12&output=embed',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
     contact: {
       tag: 'Reserva',
@@ -231,13 +252,13 @@ const translations = {
       tabs: ['Stay', 'Escape', 'Relax'],
       quickInfo: [
         { label: 'Location', value: 'Mendoza, Argentina', icon: 'location' },
-        { label: 'Capacity', value: 'Up to 6 guests', icon: 'house' },
+        { label: 'Capacity', value: 'Up to 7 guests', icon: 'house' },
         { label: 'Setting', value: 'Garden and mountains', icon: 'nature' },
       ],
       stats: [
-        { value: '9K+', label: 'Stay searches' },
-        { value: '5K+', label: 'Interested travelers' },
-        { value: '58+', label: 'Memorable escapes' },
+        { value: '9.6', label: 'Exceptional Booking score' },
+        { value: '250 m²', label: 'House size' },
+        { value: '9.4', label: 'Highly rated location' },
       ],
       locationLabel: 'Location',
       locationValue: 'Mendoza, Argentina',
@@ -299,18 +320,39 @@ const translations = {
       ],
       imageAlt: 'Vineyards and natural scenery in Mendoza',
     },
+    reviews: {
+      tag: 'Reviews',
+      title: 'Reviews from Booking and direct access to Google feedback.',
+      description:
+        'This section combines visible comments from Booking with direct links to reviews shared from Google. Once we have the exact Google text, those cards can be replaced without redesigning the section.',
+      bookingLabel: 'Booking',
+      googleLabel: 'Google Reviews',
+      openBooking: 'View on Booking',
+      openGoogle: 'Open review',
+      previous: 'Previous review',
+      next: 'Next review',
+      goTo: 'Go to review',
+      summary: {
+        rating: '9.6',
+        caption: 'Visual mockup based on the public Booking listing and prepared for later connection to real reviews.',
+        button: 'View on Booking',
+        link: 'https://www.booking.com/hotel/ar/casa-muller-mendoza.es-ar.html',
+      },
+    },
     location: {
       tag: 'Location',
       title: 'A strategic location to move around easily and disconnect well.',
       description:
-        'Use this section to add the real address of Casa Muller, nearby references, and points of interest.',
+        'Casa Muller is located in a quiet area of Las Compuertas, ideal for relaxing while staying close to wineries, mountain routes, and experiences in Luján de Cuyo.',
       addressLabel: 'Address',
-      address: 'Placeholder real address for Casa Muller, Mendoza, Argentina',
-      note: 'Replace this text with exact directions, neighborhood details, or nearby wineries and access points.',
+      address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
+      note: 'A peaceful residential setting with convenient access to wine country, nature, and scenic drives.',
       button: 'Get directions',
-      directionsUrl: 'https://maps.google.com/?q=Mendoza+Argentina',
+      directionsUrl:
+        'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
       mapTitle: 'Casa Muller map in Mendoza',
-      mapEmbedUrl: 'https://www.google.com/maps?q=Mendoza%20Argentina&z=12&output=embed',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
     contact: {
       tag: 'Booking',
@@ -356,13 +398,13 @@ const translations = {
       tabs: ['Estadia', 'Escapada', 'Descanso'],
       quickInfo: [
         { label: 'Localização', value: 'Mendoza, Argentina', icon: 'location' },
-        { label: 'Capacidade', value: 'Até 6 hóspedes', icon: 'house' },
+        { label: 'Capacidade', value: 'Até 7 hóspedes', icon: 'house' },
         { label: 'Entorno', value: 'Jardim e montanhas', icon: 'nature' },
       ],
       stats: [
-        { value: '9K+', label: 'Buscas de hospedagem' },
-        { value: '5K+', label: 'Viajantes interessados' },
-        { value: '58+', label: 'Escapadas memoráveis' },
+        { value: '9.6', label: 'Nota excepcional no Booking' },
+        { value: '250 m²', label: 'Área da casa' },
+        { value: '9.4', label: 'Localização muito bem avaliada' },
       ],
       locationLabel: 'Localização',
       locationValue: 'Mendoza, Argentina',
@@ -390,7 +432,7 @@ const translations = {
       tag: 'Sobre a casa',
       title: 'Um espaço pensado para aproveitar cada momento da sua escapada.',
       description:
-        'Casa Muller combina conforto, acolhimento e uma atmosfera serena para quem quer descansar em Mendoza. A distribuição convida a compartilhar, relaxar e viver a cidade no ritmo certo, seja em família ou em casal.',
+        'Casa Muller é uma casa ampla de 250 m² em Las Compuertas, ideal para descansar perto de vinícolas, termas e montanha. A distribuição combina cozinha integrada, sala com lareira, suíte, jardim e espaços pensados para curtir em família ou com amigos.',
       features: sharedFeatures.pt,
     },
     services: {
@@ -424,18 +466,39 @@ const translations = {
       ],
       imageAlt: 'Vinhedos e paisagem natural de Mendoza',
     },
+    reviews: {
+      tag: 'Opiniões',
+      title: 'Avaliações do Booking e acessos diretos às resenhas do Google.',
+      description:
+        'A seção combina comentários visíveis do Booking com links diretos para avaliações compartilhadas do Google. Quando tivermos o texto exato do Google, substituímos esses cartões sem refazer o layout.',
+      bookingLabel: 'Booking',
+      googleLabel: 'Google Reviews',
+      openBooking: 'Ver no Booking',
+      openGoogle: 'Abrir avaliação',
+      previous: 'Avaliação anterior',
+      next: 'Próxima avaliação',
+      goTo: 'Ir para a avaliação',
+      summary: {
+        rating: '9.6',
+        caption: 'Maquete visual baseada na ficha pública do Booking e preparada para conexão futura com avaliações reais.',
+        button: 'Ver no Booking',
+        link: 'https://www.booking.com/hotel/ar/casa-muller-mendoza.es-ar.html',
+      },
+    },
     location: {
       tag: 'Localização',
       title: 'Uma localização estratégica para circular bem e desconectar melhor.',
       description:
-        'Use esta seção para incluir o endereço real da Casa Muller, referências do bairro e pontos de interesse próximos.',
+        'Casa Muller está localizada em uma área tranquila de Las Compuertas, ideal para descansar e ao mesmo tempo ficar perto de vinícolas, montanhas e passeios em Luján de Cuyo.',
       addressLabel: 'Endereço',
-      address: 'Placeholder endereço real da Casa Muller, Mendoza, Argentina',
-      note: 'Substitua este texto por orientações precisas, bairro, vinícolas próximas ou acessos principais.',
+      address: 'Barrio Jardines de Santa Oliva Manzana B Casa 52, Las Compuertas, M5549 Luján de Cuyo, Mendoza',
+      note: 'Ambiente residencial e tranquilo, com acesso conveniente a vinícolas, natureza e rotas cênicas.',
       button: 'Como chegar',
-      directionsUrl: 'https://maps.google.com/?q=Mendoza+Argentina',
+      directionsUrl:
+        'https://maps.google.com/?q=Barrio+Jardines+de+Santa+Oliva+Manzana+B+Casa+52+Las+Compuertas+Lujan+de+Cuyo+Mendoza',
       mapTitle: 'Mapa da Casa Muller em Mendoza',
-      mapEmbedUrl: 'https://www.google.com/maps?q=Mendoza%20Argentina&z=12&output=embed',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Barrio%20Jardines%20de%20Santa%20Oliva%20Manzana%20B%20Casa%2052%20Las%20Compuertas%20Lujan%20de%20Cuyo%20Mendoza&z=15&output=embed',
     },
     contact: {
       tag: 'Reserva',

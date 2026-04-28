@@ -6,6 +6,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Experience from './components/Experience'
+import Reviews from './components/Reviews'
 import Location from './components/Location'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -13,6 +14,7 @@ import LoadingScreen from './components/LoadingScreen'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import translations from './data/translations'
 import images from './data/images'
+import reviews from './data/reviews'
 
 function App() {
   const [language, setLanguage] = useState('es')
@@ -48,6 +50,7 @@ function App() {
         <Services t={t} />
         <Gallery t={t} images={images.gallery} />
         <Experience t={t} images={images.experience} />
+        <Reviews t={t} reviews={reviews} />
         <Location t={t} />
         <Contact t={t} />
       </main>
